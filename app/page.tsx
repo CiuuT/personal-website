@@ -1,6 +1,11 @@
+import LiquidParticleBlob from '../component/LiquidParticleBlob';
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-zinc-900">
+    <main className="min-h-dvh bg-transparent text-foreground">
+      {/* 1. 粒子组件 */}
+      <LiquidParticleBlob />
+      
       <div className="mx-auto flex max-w-3xl flex-col gap-6 px-6 py-16">
         <h1 className="text-4xl font-bold tracking-tight">
           Chuhang Liu

@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #141414;
 }
 
 @theme inline {
@@ -19,8 +19,60 @@
   }
 }
 
+/* page background color */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #dde8f6; /* 深蓝基底 */
+  color: #0f172a;
+}
+
+/* 模糊波纹背景容器 */
+.soft-ripple-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0; /* 确保能显示在内容下方 */
+  overflow: hidden;
+
+  /* 整体主色：淡蓝渐变 */
+  background: radial-gradient(
+    circle at 50% 0%, 
+    #e8f2ff,    /* 靠上的深蓝 */
+    #c9dcf4 45%, 
+    #95b2d8 100%
+  );
+}
+
+/* 两层漂浮的淡蓝光影 */
+.soft-ripple-bg::before,
+.soft-ripple-bg::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+
+  /* 两块淡蓝色的柔光模糊 */
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(148, 191, 255, 0.35), 
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 75% 80%,
+      rgba(129, 199, 255, 0.25), 
+      transparent 65%
+    );
+
+  filter: blur(60px);
+  mix-blend-mode: soft-light;
+  opacity: 0.8;
+}
+
+/* 动画层 1 */
+.soft-ripple-bg::before {
+  animation: ripple-move-1 12s ease-in-out infinite alternate;
+}
+
+/* 动画层 2（更轻更慢） */
+.soft-ripple-bg::after {
+  animation: ripple-move-2 16s ease-in-out infinite alternate;
+  opacity: 0.7;
 }
