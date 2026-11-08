@@ -30,7 +30,7 @@ export default function ProjectsPage() {
               <li>Designed data structures and classification methods to support future policy review and global resource-sharing.</li>
               <li>Alongside the repository work, evaluated 10+ Girls’ Education Initiative proposals and prepared analyses and feedback to inform senior-level recommendations to country offices.</li>
             </ul>
-            <a className="text-link" href="mailto:chuhang.liu@duke.edu?subject=Safe%20to%20Learn%20repository">Ask me about this work <Arrow /></a>
+            <a className="text-link" href="mailto:liuchuhang777@outlook.com?subject=Safe%20to%20Learn%20repository">Ask me about this work <Arrow /></a>
           </div>
         </details>
       </div><p className="work-note"><span className="status-dot" /> This website is an ongoing experiment, too. Built with curiosity, refined over time.</p></section>
