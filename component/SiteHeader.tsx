@@ -17,7 +17,7 @@ export default function SiteHeader() {
       <nav aria-label="Main navigation">
         {navigation.map(({ href, label }) => (
           <Link key={href} href={href} aria-current={pathname === href ? 'page' : undefined}>
-            {label}{href === '/connect' && <span aria-hidden="true"> ↗</span>}
+            {label}
           </Link>
         ))}
       </nav>

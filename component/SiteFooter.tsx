@@ -3,7 +3,7 @@ export default function SiteFooter() {
     <footer className="site-footer shell">
       <span>© {new Date().getFullYear()} Chuhang Liu</span>
       <span>Thoughtfully connected.</span>
-      <a href="#top">Back to top ↑</a>
+      <a href="#top">Back to top</a>
     </footer>
   );
 }
